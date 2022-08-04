@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import Image from './forma-bolo.png'
 import Logo from './juliaepedro.png'
 import Cozinha from './cozinha.png'
 import Sala from './sala.png'
@@ -40,21 +39,24 @@ const ItemsListByCategory = ({ category, setResponsavel, responsavel, lista, pre
             <div className='labelBackground'>
               <p className='itemName'>{lista[key].nome} </p>
             </div>
-            <div className='itemBackground'>
-              <img alt='item' className='itemImage' src={Image} />
-            </div>
-            {lista[key].link !== '' ? <a className='sugestao' href={lista[key].link} target='_blank'>Sugestão</a> : <span className='sem-sugestao'></span>}
+            {lista[key].imagem !== '' && (
+              <div className='itemBackground'>
+                <img alt='item' className='itemImage' src={lista[key].imagem} />
+              </div>
+            )}
+            <>
+              {lista[key].link !== '' && <a className='sugestao-sem-foto'href={lista[key].link} target='_blank' rel="noopener noreferrer">Sugestão</a>}
+              {lista[key].link === '' && <span className='sem-sugestao'>Sem sugestão</span>}
+            </>
             <div className='labelBackground'>
               {lista[key].responsavel && <p className='itemResponsavel'>{lista[key].responsavel}</p>}
               {!lista[key].responsavel && (
                 <div className='inputResponsavel'>
                   <input type="text" onChange={(e) => setResponsavel(e.target.value)} />
-                  <button onClick={() => choosePresent(lista[key])}><span>❤️</span></button>
+                  <button onClick={() => choosePresent(lista[key])}><span role="img" aria-label="heart">❤️</span></button>
                 </div>
               )}
-            </div>
-            
-              
+            </div>            
           </article>
         )
       })}
@@ -67,7 +69,7 @@ const ItemsList = ({ setResponsavel, responsavel, presentes, setPresentes }) => 
   const separateByCategory = (categoria) => {
     let lista = []
 
-    Object.keys(presentes).map((chave, _) => {
+    Object.keys(presentes).forEach((chave, _) => {
       if (presentes[chave].categoria === categoria) {
         lista.push(presentes[chave])
       }
@@ -85,12 +87,12 @@ const ItemsList = ({ setResponsavel, responsavel, presentes, setPresentes }) => 
 
   return (
     <>
-      <ItemsListByCategory category={Cozinha} setResponsavel={setResponsavel} responsavel={responsavel} lista={listaCozinha} presentes={presentes} setPresentes={setPresentes} />
       <ItemsListByCategory category={Quarto} setResponsavel={setResponsavel} responsavel={responsavel} lista={listaQuarto} presentes={presentes} setPresentes={setPresentes} />
-      <ItemsListByCategory category={Banheiro} setResponsavel={setResponsavel} responsavel={responsavel} lista={listaBanheiro} presentes={presentes} setPresentes={setPresentes} />
       <ItemsListByCategory category={Sala} setResponsavel={setResponsavel} responsavel={responsavel} lista={listaSala} presentes={presentes} setPresentes={setPresentes} />
+      <ItemsListByCategory category={Banheiro} setResponsavel={setResponsavel} responsavel={responsavel} lista={listaBanheiro} presentes={presentes} setPresentes={setPresentes} />
       <ItemsListByCategory category={Limpeza} setResponsavel={setResponsavel} responsavel={responsavel} lista={listaLimpeza} presentes={presentes} setPresentes={setPresentes} />
       <ItemsListByCategory category={Utilidades} setResponsavel={setResponsavel} responsavel={responsavel} lista={listaUtilidades} presentes={presentes} setPresentes={setPresentes} />
+      <ItemsListByCategory category={Cozinha} setResponsavel={setResponsavel} responsavel={responsavel} lista={listaCozinha} presentes={presentes} setPresentes={setPresentes} />
     </>
   )
 }

@@ -141,16 +141,20 @@ h4 {
 
 .itemName {
   font-weight: bold;
+  height: 100px;
+  display: flex;
+  align-items: center;
 }
 
 .itemBackground {
   border-radius: 50%;
   background-color: #6667ab;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
+  /* margin-bottom: 50px; */
 }
 
 .itemImage {
@@ -174,6 +178,7 @@ input {
   border: 1px solid #6667ab;
   padding: 5px 10px;
   font-size: 16px;
+  outline: #6667ab;
 }
 
 input:focus-visible {
@@ -207,7 +212,19 @@ button {
   color: #6667ab;
 }
 
+.sugestao-sem-foto,
 .sugestao,
 .sem-sugestao {
+  color: #6667ab;
+  text-decoration: none;
   height: 20px;
+  font-weight: bold;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
 }
