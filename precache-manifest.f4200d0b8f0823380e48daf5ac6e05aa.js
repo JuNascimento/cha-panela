@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "3918ed7de990916ad5ab",
+    "revision": "92f16180ecb8292b504e",
     "url": "/cha-panela/static/css/main.faa6b8df.chunk.css"
   },
   {
-    "revision": "3918ed7de990916ad5ab",
-    "url": "/cha-panela/static/js/main.73997bcc.chunk.js"
+    "revision": "92f16180ecb8292b504e",
+    "url": "/cha-panela/static/js/main.899e76a0.chunk.js"
   },
   {
     "revision": "803b421dfd6e954ecb2c",
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/cha-panela/static/media/flor12.fc38d814.png"
   },
   {
-    "revision": "9bb316f9111ef33c008e6c19749edde0",
+    "revision": "bd6a66c2a868e797884fa542625b0e86",
     "url": "/cha-panela/index.html"
   }
 ];
