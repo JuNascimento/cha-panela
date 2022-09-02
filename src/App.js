@@ -45,8 +45,8 @@ const ItemsListByCategory = ({ category, setResponsavel, responsavel, lista, pre
               </div>
             )}
             <>
-              {lista[key].link !== '' && <a className='sugestao-sem-foto'href={lista[key].link} target='_blank' rel="noopener noreferrer">Sugestão</a>}
-              {lista[key].link === '' && <span className='sem-sugestao'>Sem sugestão</span>}
+              {lista[key].link !== '' && <a className='sugestao-sem-foto'href={lista[key].link} target='_blank' rel="noopener noreferrer">Dica</a>}
+              {lista[key].link === '' && <span className='sem-sugestao'>Sem dica</span>}
             </>
             <div className='labelBackground'>
               {lista[key].responsavel && <p className='itemResponsavel'>{lista[key].responsavel}</p>}
@@ -123,15 +123,26 @@ const App = () => {
         <section className='subject'>
           <h3>Dia, lugar e hora</h3>
           <div>
-            <h4>Nosso chá vai acontecer no dia 17/09/2022, na Rua Joaquim Gomes de Andrade, 37, Coelho da Rocha, São João de Meriti - RJ, ás 16h.</h4>
+            <h4>
+              Nosso chá vai acontecer no dia 17/09/2022, na Primeira Igreja Batista em Coelho da Rocha, ás 16h.
+            </h4>
+            <h4>
+              Endereço: Rua Joaquim Gomes de Andrade, 37, Coelho da Rocha, São João de Meriti - RJ
+            </h4>
+              
           </div>
         </section>
         <section className='subject'>
           <h3>Presentinhos</h3>
           <h4>
             Abaixo listamos os presentes separados por categorias. <br/>
-            Para escolher, só escrever seu nome no campo abaixo da imagem e clicar no ❤️. <br/>
+            Para escolher, só escrever seu nome no campo abaixo da imagem e clicar no ❤️, que já vai avisar pra gente o que você escolheu! <br/>
             Pode escolher quantos quiser, viu? rs
+          </h4>
+
+          <h4>
+            Colocamos algumas imagens e links de dicas para te guiar na escolha. Sabemos que vai ser feito com carinho!
+            O link serve como guia, não necessariamente como local escolhido para compra.
           </h4>
           {Object.keys(presentes).length > 0 && (
             <ItemsList
