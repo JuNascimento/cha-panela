@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "4913ddaea15fe85d3e6c",
+    "revision": "9f530f4bcd2b39b8d3bd",
     "url": "/cha-panela/static/css/main.faa6b8df.chunk.css"
   },
   {
-    "revision": "4913ddaea15fe85d3e6c",
-    "url": "/cha-panela/static/js/main.6f622b7d.chunk.js"
+    "revision": "9f530f4bcd2b39b8d3bd",
+    "url": "/cha-panela/static/js/main.18b70985.chunk.js"
   },
   {
-    "revision": "dcc1f7bbdafa153392ac",
-    "url": "/cha-panela/static/js/runtime~main.f45443dc.js"
+    "revision": "803b421dfd6e954ecb2c",
+    "url": "/cha-panela/static/js/runtime~main.f08000ce.js"
   },
   {
-    "revision": "86ce092940022c2d4fd6",
-    "url": "/cha-panela/static/js/2.1268af4a.chunk.js"
+    "revision": "9b1483201004340eb23f",
+    "url": "/cha-panela/static/js/2.abc239e4.chunk.js"
   },
   {
-    "revision": "5d06bb858cc186fdb179",
-    "url": "/cha-panela/static/js/3.b019360d.chunk.js"
+    "revision": "d14e4b2bc92b6ae455e9",
+    "url": "/cha-panela/static/js/3.4ea34601.chunk.js"
   },
   {
     "revision": "581bdd99582bd136b5a9363977f0f262",
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/cha-panela/static/media/flor12.fc38d814.png"
   },
   {
-    "revision": "75876f06fd4dbb3481a3f8d4a8c51583",
+    "revision": "8a40ceb970d29988531a389c200c2e72",
     "url": "/cha-panela/index.html"
   }
 ];
