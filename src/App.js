@@ -45,8 +45,8 @@ const ItemsListByCategory = ({ category, setResponsavel, responsavel, lista, pre
               </div>
             )}
             <>
-              {lista[key].link !== '' && <a className='sugestao-sem-foto'href={lista[key].link} target='_blank' rel="noopener noreferrer">Dica</a>}
-              {lista[key].link === '' && <span className='sem-sugestao'>Sem dica</span>}
+              {lista[key].link !== '' && <a className='sugestao-sem-foto'href={lista[key].link} target='_blank' rel="noopener noreferrer">Clique aqui para conhecer o presente</a>}
+              {lista[key].link === '' && <span className='sem-sugestao'></span>}
             </>
             <div className='labelBackground'>
               {lista[key].responsavel && <p className='itemResponsavel'>{lista[key].responsavel}</p>}
